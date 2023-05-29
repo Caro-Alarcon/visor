@@ -1,0 +1,25 @@
+<h1 class="my-5">Formulario Ingreso Movies</h1>
+
+<%= form_with model: @movie, method: :post do |form| %>
+    <div class="col-4">
+        <div class="mb-3">
+            <%= form.label :name, "Name", class: "form-label" %>
+            <%= form.text_field :name, class: "form-control" %>
+        </div>
+
+        <div class="mb-5">
+            <%= form.label :director, "Director", class: "form-label" %>
+            <%= form.text_field :director, class: "form-control" %>
+        </div>
+
+        <div class="mb-5">
+            <%= form.label :synopsis, "Synopsis", class: "form-label" %>
+            <%= form.text_area :synopsis, class: "form-control" %>
+        </div>
+
+        <div class="my-3">
+            <%= form.submit "Create Movie", class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
+    

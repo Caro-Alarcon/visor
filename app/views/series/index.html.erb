@@ -1,0 +1,19 @@
+<h1 class="my-5">Mostrando All Series</h1>
+
+<h5 class="text-danger" ><%= @series.count %></h5>
+<div class="my-5 row">
+    <% @series.each do |s| %>
+        <div class="mb-5 col">
+            <div class="card">
+                <h6>Id: <%= s.id %></h6>
+                <h5>Name: <%= s.name %></h5>
+                <h5>Director: <%= s.director %></h5>
+                <p>Synopsis: <%= s.synopsis %></p>
+            </div>
+        </div>
+    <% end%>
+
+    <div class="my-5">
+    <%= link_to "Agregar Serie", series_new_path, class: "btn btn-secondary" %>
+    </div>
+ </div>

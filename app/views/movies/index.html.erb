@@ -1,0 +1,21 @@
+<h1 class="my-5">Mostrando All Movies</h1>
+
+<h5 class="text-danger" ><%= @movies.count %></h5>
+<div class="my-5 row">
+    <% @movies.each do |m| %>
+        <div class="mb-5 col">
+            <div class="card">
+                <h6>Id: <%= m.id %></h6>
+                <h5>Name: <%= m.name %></h5>
+                <h5>Director: <%= m.director %></h5>
+                <p>Synopsis: <%= m.synopsis %></p>
+            </div>
+        </div>
+    <% end%>
+
+    <div class="my-5">
+    <%= link_to "Agregar Movie", movies_new_path, class: "btn btn-secondary" %>
+    </div>
+ </div>
+
+
